@@ -97,14 +97,14 @@ public class Wordle {
 
         // Choose secret word
         String secret = chooseSecretWord(dict);
-        System.out.println("The secret word is:" + secret);
+        // System.out.println("The secret word is:" + secret);
 
         // Prepare 2D arrays for guesses and results
         char[][] guesses = new char [MAX_ATTEMPTS][WORD_LENGTH];
         char[][] results = new char [MAX_ATTEMPTS][WORD_LENGTH];
 
         // Prepare to read from the standart input 
-        In inp = new In();
+        In in = new In();
 
         int attempt = 0;
         boolean won = false;
@@ -118,7 +118,6 @@ public class Wordle {
             while (!valid) {
                 
                 System.out.print("Enter your guess (5-letter word): ");
-                In in = new In();
                 guess = in.readLine();
 
                 if (guess.length() != 5) {
