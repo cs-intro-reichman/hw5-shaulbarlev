@@ -1,7 +1,5 @@
 
 import java.util.Dictionary;
-import java.util.Scanner;
-
 
 public class Wordle {
 
@@ -118,9 +116,10 @@ public class Wordle {
 
             // Loop until you read a valid guess
             while (!valid) {
-                Scanner sc = new Scanner(System.in);
+                
                 System.out.print("Enter your guess (5-letter word): ");
-                guess = sc.nextLine();
+                In in = new In();
+                guess = in.readLine();
 
                 if (guess.length() != 5) {
                     System.out.println("Invalid word. Please try again.");
