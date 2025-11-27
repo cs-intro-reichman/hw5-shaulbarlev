@@ -19,7 +19,12 @@ public class Wordle {
     // Simple helper: check if letter c appears anywhere in secret (true), otherwise
     // return false.
     public static boolean containsChar(String secret, char c) {
-		// ...
+		for (int i = 0; i < secret.length(); i++) {
+            if ((secret.charAt(i) == c)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     // Compute feedback for a single guess into resultRow.
