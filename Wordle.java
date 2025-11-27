@@ -1,14 +1,19 @@
+
+import java.util.Dictionary;
+
 public class Wordle {
 
     // Reads all words from dictionary filename into a String array.
     public static String[] readDictionary(String filename) {
-		// ...
+        In in = new In(filename);
+        return in.readAllLines();
     }
 
     // Choose a random secret word from the dictionary. 
     // Hint: Pick a random index between 0 and dict.length (not including) using Math.random()
     public static String chooseSecretWord(String[] dict) {
-		// ...
+		int randomIndex = (int) (Math.random() * (dict.length+1));
+        return dict[randomIndex];
     }
 
     // Simple helper: check if letter c appears anywhere in secret (true), otherwise
