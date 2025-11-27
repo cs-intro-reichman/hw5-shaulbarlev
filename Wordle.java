@@ -150,6 +150,6 @@ public class Wordle {
             System.out.println("Sorry, you did not guess the word.");
         }
 
-        inp.close();
+        in.close();
     }
 }
